@@ -1,0 +1,1306 @@
+﻿[CustomCards]
+	[
+		{
+			"name": "Interplanar Invader, Yarax",
+			"rarity": "mythic",
+			"mana_cost": "{2}{B}{R}",
+			"type": "Legendary Creature — Alien Noble",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/77_Interplanar Invader, Yarax.jpg"
+			}
+		},
+		{
+			"name": "The Ruthless Admiral",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}",
+			"type": "Legendary Enchantment — Background",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/85_The Ruthless Admiral.jpg"
+			}
+		},
+		{
+			"name": "The Tireless Machine",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{G}",
+			"type": "Legendary Enchantment — Background",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/89_The Tireless Machine.jpg"
+			}
+		},
+		{
+			"name": "The Lifeless Scourge",
+			"rarity": "mythic",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Legendary Enchantment — Background",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/80_The Lifeless Scourge.jpg"
+			}
+		},
+		{
+			"name": "Skrolrax, the Herald",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Legendary Creature — Alien Scout",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/47_Skrolrax, the Herald.jpg"
+			}
+		},
+		{
+			"name": "Interplanar Crimelord",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}",
+			"type": "Creature — Alien Slug Rogue",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/42_Interplanar Crimelord.jpg"
+			}
+		},
+		{
+			"name": "When Aliens Attack!",
+			"rarity": "rare",
+			"mana_cost": "{X}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/49_When Aliens Attack!.jpg"
+			}
+		},
+		{
+			"name": "Hologram Constructor",
+			"rarity": "mythic",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Artifact Creature — Construct",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/40_Hologram Constructor.jpg"
+			}
+		},
+		{
+			"name": "Orbital Goretillery",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Artifact",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/45_Orbital Goretillery.jpg"
+			}
+		},
+		{
+			"name": "Impact Tremors",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Enchantment",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/41_Impact Tremors.jpg"
+			}
+		},
+		{
+			"name": "Parting Shot",
+			"rarity": "mythic",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/46_Parting Shot.jpg"
+			}
+		},
+		{
+			"name": "Lackey of the Month",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature — Alien Minion",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/44_Lackey of the Month.jpg"
+			}
+		},
+		{
+			"name": "Arsenal Walker",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}",
+			"type": "Artifact — Vehicle",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/36_Arsenal Walker.jpg"
+			}
+		},
+		{
+			"name": "Invade",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/43_Invade.jpg"
+			}
+		},
+		{
+			"name": "Yaraxian Commander",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Alien Soldier",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/50_Yaraxian Commander.jpg"
+			}
+		},
+		{
+			"name": "Grasp at the Beyond",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/39_Grasp at the Beyond.jpg"
+			}
+		},
+		{
+			"name": "Blasphemous Act",
+			"rarity": "rare",
+			"mana_cost": "{8}{R}",
+			"type": "Sorcery",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/37_Blasphemous Act.jpg"
+			}
+		},
+		{
+			"name": "All Will Be One",
+			"rarity": "mythic",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Enchantment",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/35_All Will Be One.jpg"
+			}
+		},
+		{
+			"name": "Temporal Extortion",
+			"rarity": "rare",
+			"mana_cost": "{B}{B}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/29_Temporal Extortion.jpg"
+			}
+		},
+		{
+			"name": "Dreadbore",
+			"rarity": "rare",
+			"mana_cost": "{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/66_Dreadbore.jpg"
+			}
+		},
+		{
+			"name": "Leave Behind",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Instant",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/25_Leave Behind.jpg"
+			}
+		},
+		{
+			"name": "Eager Interloper",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Alien Minion",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/20_Eager Interloper.jpg"
+			}
+		},
+		{
+			"name": "Sol Ring",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/102_Sol Ring.jpg"
+			}
+		},
+		{
+			"name": "Commander's Sphere",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/97_Commander's Sphere.jpg"
+			}
+		},
+		{
+			"name": "Yaraxian Infiltrator",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Alien Minion",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/34_Yaraxian Infiltrator.jpg"
+			}
+		},
+		{
+			"name": "Yaraxian Arena",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Enchantment",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/33_Yaraxian Arena.jpg"
+			}
+		},
+		{
+			"name": "City Stompers",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Artifact — Vehicle",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/16_City Stompers.jpg"
+			}
+		},
+		{
+			"name": "Blasphemous Edict",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/13_Blasphemous Edict.jpg"
+			}
+		},
+		{
+			"name": "Death's Legacy",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/19_Death's Legacy.jpg"
+			}
+		},
+		{
+			"name": "Worst Fears",
+			"rarity": "mythic",
+			"mana_cost": "{7}{B}",
+			"type": "Sorcery",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/32_Worst Fears.jpg"
+			}
+		},
+		{
+			"name": "Burst from Within",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Enchantment",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/14_Burst from Within.jpg"
+			}
+		},
+		{
+			"name": "Choice of Damnations",
+			"rarity": "rare",
+			"mana_cost": "{5}{B}",
+			"type": "Sorcery — Arcane",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/15_Choice of Damnations.jpg"
+			}
+		},
+		{
+			"name": "I Expect You to Die",
+			"rarity": "rare",
+			"mana_cost": "{4}{B}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/23_I Expect You to Die.jpg"
+			}
+		},
+		{
+			"name": "Target the Power Centers",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/88_Target the Power Centers.jpg"
+			}
+		},
+		{
+			"name": "Widespread Brutality",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/95_Widespread Brutality.jpg"
+			}
+		},
+		{
+			"name": "Unlicensed Disintegration",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Instant",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/91_Unlicensed Disintegration.jpg"
+			}
+		},
+		{
+			"name": "Haughty Tormentor",
+			"rarity": "rare",
+			"mana_cost": "{4}{B}{R}",
+			"type": "Creature — Human Noble",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/73_Haughty Tormentor.jpg"
+			}
+		},
+		{
+			"name": "Appetite for Destruction",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Enchantment",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/59_Appetite for Destruction.jpg"
+			}
+		},
+		{
+			"name": "Monument Melter",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}{R}",
+			"type": "Artifact — Vehicle",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/83_Monument Melter.jpg"
+			}
+		},
+		{
+			"name": "Hullbreach Horror",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Creature — Alien Horror",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/74_Hullbreach Horror.jpg"
+			}
+		},
+		{
+			"name": "Stalking Vengeance",
+			"rarity": "rare",
+			"mana_cost": "{5}{R}{R}",
+			"type": "Creature — Avatar",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/48_Stalking Vengeance.jpg"
+			}
+		},
+		{
+			"name": "War Machines",
+			"rarity": "rare",
+			"mana_cost": "{B}{R}",
+			"type": "Artifact Creature — Construct Soldier",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/94_War Machines.jpg"
+			}
+		},
+		{
+			"name": "Brain Harvest",
+			"rarity": "mythic",
+			"mana_cost": "{5}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/62_Brain Harvest.jpg"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/107_Swamp.jpg"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/105_Plains.jpg"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/106_Island.jpg"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/109_Forest.jpg"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/108_Mountain.jpg"
+			}
+		},
+		{
+			"name": "Command Tower",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/104_Command Tower.jpg"
+			}
+		},
+		{
+			"name": "Stabilize the Time Matrix",
+			"rarity": "mythic",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/10_Stabilize the Time Matrix.jpg"
+			}
+		},
+		{
+			"name": "Expose",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Sorcery",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/7_Expose.jpg"
+			}
+		},
+		{
+			"name": "Parasitic Spycraft",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Enchantment",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/8_Parasitic Spycraft.jpg"
+			}
+		},
+		{
+			"name": "Rydirax, Virulent Doom",
+			"rarity": "mythic",
+			"mana_cost": "{2}{U}",
+			"type": "Legendary Creature — Alien Germ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/9_Rydirax, Virulent Doom.jpg"
+			}
+		},
+		{
+			"name": "Contagion Engine",
+			"rarity": "rare",
+			"mana_cost": "{6}",
+			"type": "Artifact",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/98_Contagion Engine.jpg"
+			}
+		},
+		{
+			"name": "Accursed Horde",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Zombie",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/11_Accursed Horde.jpg"
+			}
+		},
+		{
+			"name": "Orb of Tumult",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/101_Orb of Tumult.jpg"
+			}
+		},
+		{
+			"name": "Orb of Decay",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/99_Orb of Decay.jpg"
+			}
+		},
+		{
+			"name": "Toll of the Invasion",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Sorcery",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/30_Toll of the Invasion.jpg"
+			}
+		},
+		{
+			"name": "Armies of the Damned",
+			"rarity": "mythic",
+			"mana_cost": "{5}{B}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/12_Armies of the Damned.jpg"
+			}
+		},
+		{
+			"name": "Corrupt the Host",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Sorcery",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/63_Corrupt the Host.jpg"
+			}
+		},
+		{
+			"name": "Tormented Flight",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Instant",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/90_Tormented Flight.jpg"
+			}
+		},
+		{
+			"name": "Hunger for Body and Soul",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Instant",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/75_Hunger for Body and Soul.jpg"
+			}
+		},
+		{
+			"name": "Expendable Force",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}{B}",
+			"type": "Creature — Alien Army",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/69_Expendable Force.jpg"
+			}
+		},
+		{
+			"name": "Steven, Patient Zero",
+			"rarity": "mythic",
+			"mana_cost": "{4}{U}{B}",
+			"type": "Legendary Creature — Zombie",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/87_Steven, Patient Zero.jpg"
+			}
+		},
+		{
+			"name": "Viral Colossus",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{B}{R}",
+			"type": "Legendary Creature — Alien Horror",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/92_Viral Colossus.jpg"
+			}
+		},
+		{
+			"name": "Escaped Test Subject",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{B}{R}",
+			"type": "Creature — Alien Zombie",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/68_Escaped Test Subject.jpg"
+			}
+		},
+		{
+			"name": "Dekriprax, Winged Plague",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}{R}",
+			"type": "Legendary Creature — Alien Vampire",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/64_Dekriprax, Winged Plague.jpg"
+			}
+		},
+		{
+			"name": "Go for the Throat",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/22_Go for the Throat.jpg"
+			}
+		},
+		{
+			"name": "Oilblood Armaments",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{G}",
+			"type": "Artifact Creature — Equipment Cyborg",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/84_Oilblood Armaments.jpg"
+			}
+		},
+		{
+			"name": "Burning Anger",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{R}",
+			"type": "Enchantment — Aura",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/38_Burning Anger.jpg"
+			}
+		},
+		{
+			"name": "Colonial Surveyor",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{G}",
+			"type": "Creature — Human Scout",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/53_Colonial Surveyor.jpg"
+			}
+		},
+		{
+			"name": "Grand Assimilation",
+			"rarity": "mythic",
+			"mana_cost": "{B}{B}{R}{R}{R}{G}{G}",
+			"type": "Sorcery",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/71_Grand Assimilation.jpg"
+			}
+		},
+		{
+			"name": "Yaraxian Conscription",
+			"rarity": "mythic",
+			"mana_cost": "{5}{B}{R}{G}",
+			"type": "Sorcery",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/96_Yaraxian Conscription.jpg"
+			}
+		},
+		{
+			"name": "Irax, the Surgeon",
+			"rarity": "mythic",
+			"mana_cost": "{1}{B}{R}{G}",
+			"type": "Legendary Creature — Alien Doctor Artificer",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/79_Irax, the Surgeon.jpg"
+			}
+		},
+		{
+			"name": "Greerax, Wireroot Network",
+			"rarity": "rare",
+			"mana_cost": "{B}{G}",
+			"type": "Legendary Artifact Creature — Alien Cyborg",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/72_Greerax, Wireroot Network.jpg"
+			}
+		},
+		{
+			"name": "Assimilate Worlds",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{G}",
+			"type": "Sorcery",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/61_Assimilate Worlds.jpg"
+			}
+		},
+		{
+			"name": "Networked Strikemods",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Artifact — Equipment",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/56_Networked Strikemods.jpg"
+			}
+		},
+		{
+			"name": "Manual Termination",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/55_Manual Termination.jpg"
+			}
+		},
+		{
+			"name": "Dowsing Manachine",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}",
+			"type": "Artifact",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/54_Dowsing Manachine.jpg"
+			}
+		},
+		{
+			"name": "Branching Evolution",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Enchantment",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/52_Branching Evolution.jpg"
+			}
+		},
+		{
+			"name": "Weaponized Enhancements",
+			"rarity": "rare",
+			"mana_cost": "{X}{G}{G}",
+			"type": "Enchantment — Aura",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/58_Weaponized Enhancements.jpg"
+			}
+		},
+		{
+			"name": "Upgrade Administrator",
+			"rarity": "mythic",
+			"mana_cost": "{3}{B}{B}{B}",
+			"type": "Artifact Creature — Construct",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/31_Upgrade Administrator.jpg"
+			}
+		},
+		{
+			"name": "Skullscrapper",
+			"rarity": "mythic",
+			"mana_cost": "{1}{B}{G}",
+			"type": "Artifact Creature — Skeleton Cyborg",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/86_Skullscrapper.jpg"
+			}
+		},
+		{
+			"name": "Lethal Throwdown",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Sorcery",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/26_Lethal Throwdown.jpg"
+			}
+		},
+		{
+			"name": "Markum, Who Doesn't Run",
+			"rarity": "rare",
+			"mana_cost": "{4}{B}",
+			"type": "Legendary Creature — Human Mercenary",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/27_Markum, Who Doesn't Run.jpg"
+			}
+		},
+		{
+			"name": "Networked Sprintmods",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Artifact — Equipment",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/28_Networked Sprintmods.jpg"
+			}
+		},
+		{
+			"name": "Zealous Purpose",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/6_Zealous Purpose.jpg"
+			}
+		},
+		{
+			"name": "Abduction Saucer",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Artifact — Vehicle",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/2_Abduction Saucer.jpg"
+			}
+		},
+		{
+			"name": "Pilot of the Pain Nexus",
+			"rarity": "mythic",
+			"mana_cost": "{4}{W}{W}",
+			"type": "Creature — Alien Pilot",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/4_Pilot of the Pain Nexus.jpg"
+			}
+		},
+		{
+			"name": "Laser Ace",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}{W}",
+			"type": "Creature — Alien Pilot",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/3_Laser Ace.jpg"
+			}
+		},
+		{
+			"name": "Warship Factory",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Artifact",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/5_Warship Factory.jpg"
+			}
+		},
+		{
+			"name": "Kilfrax, Resistance Crusher",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Legendary Creature — Alien Berserker",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/24_Kilfrax, Resistance Crusher.jpg"
+			}
+		},
+		{
+			"name": "Crashing Pod",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Artifact — Vehicle",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/18_Crashing Pod.jpg"
+			}
+		},
+		{
+			"name": "Foul-Tongue Shriek",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Instant",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/21_Foul-Tongue Shriek.jpg"
+			}
+		},
+		{
+			"name": "Orb of Tenacity",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/100_Orb of Tenacity.jpg"
+			}
+		},
+		{
+			"name": "Drop Ship",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}{B}",
+			"type": "Artifact — Vehicle",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/67_Drop Ship.jpg"
+			}
+		},
+		{
+			"name": "Arrival of the Fleet",
+			"rarity": "mythic",
+			"mana_cost": "{4}{R}{W}{B}",
+			"type": "Legendary Sorcery",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/60_Arrival of the Fleet.jpg"
+			}
+		},
+		{
+			"name": "Vivisection Scholar",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{B}",
+			"type": "Creature — Alien Doctor",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/93_Vivisection Scholar.jpg"
+			}
+		},
+		{
+			"name": "Dr. Splukrax",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}",
+			"type": "Legendary Creature — Alien Doctor",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/65_Dr. Splukrax.jpg"
+			}
+		},
+		{
+			"name": "Mandatory Overtime",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Enchantment",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/82_Mandatory Overtime.jpg"
+			}
+		},
+		{
+			"name": "Imperial Weapons Techs",
+			"rarity": "mythic",
+			"mana_cost": "{3}{W}{B}",
+			"type": "Creature — Alien Artificer",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/76_Imperial Weapons Techs.jpg"
+			}
+		},
+		{
+			"name": "Manaweave Technology",
+			"rarity": "mythic",
+			"mana_cost": "{2}{R}{W}{B}",
+			"type": "Artifact Enchantment",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/81_Manaweave Technology.jpg"
+			}
+		},
+		{
+			"name": "Interplanar Politics",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}",
+			"type": "Sorcery",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/78_Interplanar Politics.jpg"
+			}
+		},
+		{
+			"name": "Firax, Radioactive Core",
+			"rarity": "mythic",
+			"mana_cost": "{1}{R}{W}{B}",
+			"type": "Legendary Creature — Elemental",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/70_Firax, Radioactive Core.jpg"
+			}
+		},
+		{
+			"name": "Thinking Tank",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Artifact Creature — Alien Cyborg",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/57_Thinking Tank.jpg"
+			}
+		},
+		{
+			"name": "Corrupt Financier",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature — Alien Minion",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/17_Corrupt Financier.jpg"
+			}
+		},
+		{
+			"name": "Biotube Technician",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Alien Minion",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/51_Biotube Technician.jpg"
+			}
+		},
+		{
+			"name": "Interplanar Drifter",
+			"rarity": "common",
+			"mana_cost": "{7}",
+			"type": "Creature — Eldrazi",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/1_Interplanar Drifter.jpg"
+			}
+		},
+		{
+			"name": "The Spearhead, Yaraxian Flagship",
+			"rarity": "mythic",
+			"mana_cost": "{10}",
+			"type": "Legendary Artifact — Vehicle",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://garduu.github.io/sets/HSS-files/img/103_The Spearhead, Yaraxian Flagship.jpg"
+			}
+		}
+	]
+
+[rare(1)]
+	1 Interplanar Invader, Yarax
+	2 The Tireless Machine
+	1 The Lifeless Scourge
+	2 Interplanar Crimelord
+	2 When Aliens Attack!
+	1 Hologram Constructor
+	1 Parting Shot
+	2 Arsenal Walker
+	2 Yaraxian Commander
+	2 Blasphemous Act
+	1 All Will Be One
+	2 Temporal Extortion
+	2 Dreadbore
+	2 Yaraxian Arena
+	2 Blasphemous Edict
+	2 Death's Legacy
+	1 Worst Fears
+	2 Choice of Damnations
+	2 I Expect You to Die
+	2 Target the Power Centers
+	2 Widespread Brutality
+	2 Haughty Tormentor
+	2 Appetite for Destruction
+	2 Stalking Vengeance
+	2 War Machines
+	1 Brain Harvest
+	1 Stabilize the Time Matrix
+	1 Rydirax, Virulent Doom
+	2 Contagion Engine
+	1 Armies of the Damned
+	2 Corrupt the Host
+	2 Expendable Force
+	1 Steven, Patient Zero
+	2 Viral Colossus
+	2 Dekriprax, Winged Plague
+	2 Oilblood Armaments
+	1 Grand Assimilation
+	1 Yaraxian Conscription
+	1 Irax, the Surgeon
+	2 Greerax, Wireroot Network
+	2 Assimilate Worlds
+	2 Dowsing Manachine
+	2 Branching Evolution
+	2 Weaponized Enhancements
+	1 Upgrade Administrator
+	1 Skullscrapper
+	2 Markum, Who Doesn't Run
+	2 Zealous Purpose
+	1 Pilot of the Pain Nexus
+	2 Laser Ace
+	2 Warship Factory
+	2 Drop Ship
+	1 Arrival of the Fleet
+	2 Vivisection Scholar
+	2 Dr. Splukrax
+	1 Imperial Weapons Techs
+	1 Manaweave Technology
+	1 Firax, Radioactive Core
+	1 The Spearhead, Yaraxian Flagship
+[uncommon(4)]
+	4 The Ruthless Admiral
+	4 Skrolrax, the Herald
+	4 Orbital Goretillery
+	4 Lackey of the Month
+	4 Invade
+	4 Leave Behind
+	4 Eager Interloper
+	4 City Stompers
+	4 Burst from Within
+	4 Unlicensed Disintegration
+	4 Monument Melter
+	4 Hullbreach Horror
+	4 Expose
+	4 Parasitic Spycraft
+	4 Accursed Horde
+	4 Tormented Flight
+	4 Hunger for Body and Soul
+	4 Escaped Test Subject
+	4 Go for the Throat
+	4 Burning Anger
+	4 Colonial Surveyor
+	4 Networked Strikemods
+	4 Manual Termination
+	4 Lethal Throwdown
+	4 Networked Sprintmods
+	4 Abduction Saucer
+	4 Kilfrax, Resistance Crusher
+	4 Crashing Pod
+	4 Mandatory Overtime
+	4 Interplanar Politics
+	4 Corrupt Financier
+[common(7)]
+	8 Impact Tremors
+	8 Grasp at the Beyond
+	8 Sol Ring
+	8 Commander's Sphere
+	8 Yaraxian Infiltrator
+	8 Command Tower
+	8 Orb of Tumult
+	8 Orb of Decay
+	8 Toll of the Invasion
+	8 Foul-Tongue Shriek
+	8 Orb of Tenacity
+	8 Thinking Tank
+	8 Biotube Technician
+	8 Interplanar Drifter
+[wildcard(2)]
+	4 Interplanar Invader, Yarax
+	15 The Ruthless Admiral
+	7 The Tireless Machine
+	4 The Lifeless Scourge
+	15 Skrolrax, the Herald
+	7 Interplanar Crimelord
+	7 When Aliens Attack!
+	4 Hologram Constructor
+	15 Orbital Goretillery
+	6 Impact Tremors
+	4 Parting Shot
+	15 Lackey of the Month
+	7 Arsenal Walker
+	15 Invade
+	7 Yaraxian Commander
+	6 Grasp at the Beyond
+	7 Blasphemous Act
+	4 All Will Be One
+	7 Temporal Extortion
+	7 Dreadbore
+	15 Leave Behind
+	15 Eager Interloper
+	6 Sol Ring
+	6 Commander's Sphere
+	6 Yaraxian Infiltrator
+	7 Yaraxian Arena
+	15 City Stompers
+	7 Blasphemous Edict
+	7 Death's Legacy
+	4 Worst Fears
+	15 Burst from Within
+	7 Choice of Damnations
+	7 I Expect You to Die
+	7 Target the Power Centers
+	7 Widespread Brutality
+	15 Unlicensed Disintegration
+	7 Haughty Tormentor
+	7 Appetite for Destruction
+	15 Monument Melter
+	15 Hullbreach Horror
+	7 Stalking Vengeance
+	7 War Machines
+	4 Brain Harvest
+	6 Command Tower
+	4 Stabilize the Time Matrix
+	15 Expose
+	15 Parasitic Spycraft
+	4 Rydirax, Virulent Doom
+	7 Contagion Engine
+	15 Accursed Horde
+	6 Orb of Tumult
+	6 Orb of Decay
+	6 Toll of the Invasion
+	4 Armies of the Damned
+	7 Corrupt the Host
+	15 Tormented Flight
+	15 Hunger for Body and Soul
+	7 Expendable Force
+	4 Steven, Patient Zero
+	7 Viral Colossus
+	15 Escaped Test Subject
+	7 Dekriprax, Winged Plague
+	15 Go for the Throat
+	7 Oilblood Armaments
+	15 Burning Anger
+	15 Colonial Surveyor
+	4 Grand Assimilation
+	4 Yaraxian Conscription
+	4 Irax, the Surgeon
+	7 Greerax, Wireroot Network
+	7 Assimilate Worlds
+	15 Networked Strikemods
+	15 Manual Termination
+	7 Dowsing Manachine
+	7 Branching Evolution
+	7 Weaponized Enhancements
+	4 Upgrade Administrator
+	4 Skullscrapper
+	15 Lethal Throwdown
+	7 Markum, Who Doesn't Run
+	15 Networked Sprintmods
+	7 Zealous Purpose
+	15 Abduction Saucer
+	4 Pilot of the Pain Nexus
+	7 Laser Ace
+	7 Warship Factory
+	15 Kilfrax, Resistance Crusher
+	15 Crashing Pod
+	6 Foul-Tongue Shriek
+	6 Orb of Tenacity
+	7 Drop Ship
+	4 Arrival of the Fleet
+	7 Vivisection Scholar
+	7 Dr. Splukrax
+	15 Mandatory Overtime
+	4 Imperial Weapons Techs
+	4 Manaweave Technology
+	15 Interplanar Politics
+	4 Firax, Radioactive Core
+	6 Thinking Tank
+	15 Corrupt Financier
+	6 Biotube Technician
+	6 Interplanar Drifter
+	4 The Spearhead, Yaraxian Flagship
