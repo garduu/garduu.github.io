@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="/sets/hss-files/icon.png"/>
+	<link rel="stylesheet" href="/resources/header.css">
+	<title>hss visual preview</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			overscroll-behavior: none;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.main-content {
+			position: relative;
+			width: 100%;
+			float: left;
+			z-index: 2;
+			justify-items: center;
+		}
+		.sidebar {
+			position: sticky;
+			top: 0;
+			display: none;
+			text-align: center;
+			padding-right: 3%;
+			z-index: 1;
+			justify-items: center;
+		}
+		.sidebar-container {
+			width: 80%;
+			max-width: 375px;
+			position: relative;
+		}
+		.sidebar-h-img {
+			display: none;
+			transform: rotate(90deg);
+			position: absolute;
+			left: 10%;
+			top: 10%;
+			width: 85%;
+		}
+		.sidebar-img {
+			vertical-align: middle;
+			width: 100%;
+		}
+		.close-btn {
+			background: url('/img/close.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 10%;
+			height: 10%;
+			border: none;
+			cursor: pointer;
+			position: absolute;
+			right: 4%;
+		}
+		.close-btn:hover {
+			background: url('/img/close-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 2px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-bottom: 1%;
+			justify-items: center;
+			max-width: 1200px;
+		}
+		.grid-container img {
+			width: 100%;
+			height: auto;
+			display: block;
+			visibility: hidden;
+			cursor: pointer;
+		}
+		.banner {
+			width: 100%;
+			height: auto;
+			padding-top: 20px;
+			padding-bottom: 50px;
+		}
+		.logo {
+			display: block;
+			margin: auto;
+			max-width: 30%;
+			max-height: 320px;
+		}
+		.container {
+			position: relative;
+			width: 100%;
+		}
+		.container img {
+			width: 100%;
+			height: auto;
+		}
+		.flip-btn {
+			background: url('/img/flip.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 15%;
+			height: 11%;
+			cursor: pointer;
+			border: none;
+			position: absolute;
+			left: 50%;
+			top: 48%;
+			transform: translate(-50%, -50%);
+			opacity: 0.5;
+		}
+		.flip-btn:hover {
+			background: url('/img/flip-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.icon-bar {
+			display: grid;
+			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
+			gap: 1px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-top: 2%;
+			padding-bottom: 1%;
+			justify-items: center;
+			align-items: center;
+		}
+		.icon-bar .icon img {
+			width: 90%;
+			max-width: 80px;
+			height: auto;
+			display: block;
+			padding: 5%;
+			margin: auto;
+			text-align: center;
+		}
+		.icon-bar .dot img {
+			width: 50%;
+			max-width: 65px;
+			height: auto;
+			display: block;
+			margin: auto;
+			text-align: center;
+		}
+		.preload-hidden {
+			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
+		}
+		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
+		.footer {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<img class="preload-hidden" src="/img/dot.png" />
+	<img class="preload-hidden" src="/sets/hss-files/logo.png" />
+	<img class="preload-hidden" src="/sets/hss-files/icon.png" />
+		<div class="header">
+		<div class="search-grid">
+			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
+			<img class="sg-icon" src="/img/search.png">
+			<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
+			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
+			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
+			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
+		</div>
+	</div>
+
+	<div class="icon-bar">
+			<div class="icon"><a href="hss"><img src="/sets/hss-files/icon.png"></img></a></div>
+
+		</div>
+		<div class="banner">
+		<img class="logo" src="/sets/hss-files/logo.png">
+		</div>
+		<div class="main-content" id="main-content">
+			<div class="grid-container">
+					<div class="container"><img alt="/sets\hss-files\img\4_Pilot of the Pain Nexus.jpg" id="4_Pilot of the Pain Nexus" data-flag="@X" onclick="openSidebar('4_Pilot of the Pain Nexus',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\9_Rydirax, Virulent Doom.jpg" id="9_Rydirax, Virulent Doom" data-flag="@X" onclick="openSidebar('9_Rydirax, Virulent Doom',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\12_Armies of the Damned.jpg" id="12_Armies of the Damned" data-flag="@X" onclick="openSidebar('12_Armies of the Damned',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\35_All Will Be One.jpg" id="35_All Will Be One" data-flag="@X" onclick="openSidebar('35_All Will Be One',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\52_Branching Evolution.jpg" id="52_Branching Evolution" data-flag="@X" onclick="openSidebar('52_Branching Evolution',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\3_Laser Ace.jpg" id="3_Laser Ace" data-flag="@X" onclick="openSidebar('3_Laser Ace',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\10_Stabilize the Time Matrix.jpg" id="10_Stabilize the Time Matrix" data-flag="@X" onclick="openSidebar('10_Stabilize the Time Matrix',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\31_Upgrade Administrator.jpg" id="31_Upgrade Administrator" data-flag="@X" onclick="openSidebar('31_Upgrade Administrator',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\40_Hologram Constructor.jpg" id="40_Hologram Constructor" data-flag="@X" onclick="openSidebar('40_Hologram Constructor',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\54_Dowsing Manachine.jpg" id="54_Dowsing Manachine" data-flag="@X" onclick="openSidebar('54_Dowsing Manachine',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\5_Warship Factory.jpg" id="5_Warship Factory" data-flag="@X" onclick="openSidebar('5_Warship Factory',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\7_Expose.jpg" id="7_Expose" data-flag="@X" onclick="openSidebar('7_Expose',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\32_Worst Fears.jpg" id="32_Worst Fears" data-flag="@X" onclick="openSidebar('32_Worst Fears',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\46_Parting Shot.jpg" id="46_Parting Shot" data-flag="@X" onclick="openSidebar('46_Parting Shot',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\58_Weaponized Enhancements.jpg" id="58_Weaponized Enhancements" data-flag="@X" onclick="openSidebar('58_Weaponized Enhancements',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\6_Zealous Purpose.jpg" id="6_Zealous Purpose" data-flag="@X" onclick="openSidebar('6_Zealous Purpose',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\8_Parasitic Spycraft.jpg" id="8_Parasitic Spycraft" data-flag="@X" onclick="openSidebar('8_Parasitic Spycraft',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\13_Blasphemous Edict.jpg" id="13_Blasphemous Edict" data-flag="@X" onclick="openSidebar('13_Blasphemous Edict',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\36_Arsenal Walker.jpg" id="36_Arsenal Walker" data-flag="@X" onclick="openSidebar('36_Arsenal Walker',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\53_Colonial Surveyor.jpg" id="53_Colonial Surveyor" data-flag="@X" onclick="openSidebar('53_Colonial Surveyor',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\2_Abduction Saucer.jpg" id="2_Abduction Saucer" data-flag="@X" onclick="openSidebar('2_Abduction Saucer',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\15_Choice of Damnations.jpg" id="15_Choice of Damnations" data-flag="@X" onclick="openSidebar('15_Choice of Damnations',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\37_Blasphemous Act.jpg" id="37_Blasphemous Act" data-flag="@X" onclick="openSidebar('37_Blasphemous Act',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\55_Manual Termination.jpg" id="55_Manual Termination" data-flag="@X" onclick="openSidebar('55_Manual Termination',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\19_Death's Legacy.jpg" id="19_Deaths Legacy" data-flag="@X" onclick="openSidebar('19_Deaths Legacy',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\42_Interplanar Crimelord.jpg" id="42_Interplanar Crimelord" data-flag="@X" onclick="openSidebar('42_Interplanar Crimelord',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\56_Networked Strikemods.jpg" id="56_Networked Strikemods" data-flag="@X" onclick="openSidebar('56_Networked Strikemods',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\23_I Expect You to Die.jpg" id="23_I Expect You to Die" data-flag="@X" onclick="openSidebar('23_I Expect You to Die',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\48_Stalking Vengeance.jpg" id="48_Stalking Vengeance" data-flag="@X" onclick="openSidebar('48_Stalking Vengeance',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\51_Biotube Technician.jpg" id="51_Biotube Technician" data-flag="@X" onclick="openSidebar('51_Biotube Technician',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\27_Markum, Who Doesn't Run.jpg" id="27_Markum, Who Doesnt Run" data-flag="@X" onclick="openSidebar('27_Markum, Who Doesnt Run',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\49_When Aliens Attack!.jpg" id="49_When Aliens Attack!" data-flag="@X" onclick="openSidebar('49_When Aliens Attack!',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\57_Thinking Tank.jpg" id="57_Thinking Tank" data-flag="@X" onclick="openSidebar('57_Thinking Tank',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\29_Temporal Extortion.jpg" id="29_Temporal Extortion" data-flag="@X" onclick="openSidebar('29_Temporal Extortion',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\50_Yaraxian Commander.jpg" id="50_Yaraxian Commander" data-flag="@X" onclick="openSidebar('50_Yaraxian Commander',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\33_Yaraxian Arena.jpg" id="33_Yaraxian Arena" data-flag="@X" onclick="openSidebar('33_Yaraxian Arena',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\38_Burning Anger.jpg" id="38_Burning Anger" data-flag="@X" onclick="openSidebar('38_Burning Anger',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\11_Accursed Horde.jpg" id="11_Accursed Horde" data-flag="@X" onclick="openSidebar('11_Accursed Horde',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\43_Invade.jpg" id="43_Invade" data-flag="@X" onclick="openSidebar('43_Invade',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\14_Burst from Within.jpg" id="14_Burst from Within" data-flag="@X" onclick="openSidebar('14_Burst from Within',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\44_Lackey of the Month.jpg" id="44_Lackey of the Month" data-flag="@X" onclick="openSidebar('44_Lackey of the Month',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\16_City Stompers.jpg" id="16_City Stompers" data-flag="@X" onclick="openSidebar('16_City Stompers',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\45_Orbital Goretillery.jpg" id="45_Orbital Goretillery" data-flag="@X" onclick="openSidebar('45_Orbital Goretillery',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\17_Corrupt Financier.jpg" id="17_Corrupt Financier" data-flag="@X" onclick="openSidebar('17_Corrupt Financier',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\47_Skrolrax, the Herald.jpg" id="47_Skrolrax, the Herald" data-flag="@X" onclick="openSidebar('47_Skrolrax, the Herald',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\18_Crashing Pod.jpg" id="18_Crashing Pod" data-flag="@X" onclick="openSidebar('18_Crashing Pod',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\39_Grasp at the Beyond.jpg" id="39_Grasp at the Beyond" data-flag="@X" onclick="openSidebar('39_Grasp at the Beyond',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\20_Eager Interloper.jpg" id="20_Eager Interloper" data-flag="@X" onclick="openSidebar('20_Eager Interloper',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\41_Impact Tremors.jpg" id="41_Impact Tremors" data-flag="@X" onclick="openSidebar('41_Impact Tremors',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\22_Go for the Throat.jpg" id="22_Go for the Throat" data-flag="@X" onclick="openSidebar('22_Go for the Throat',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\24_Kilfrax, Resistance Crusher.jpg" id="24_Kilfrax, Resistance Crusher" data-flag="@X" onclick="openSidebar('24_Kilfrax, Resistance Crusher',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\25_Leave Behind.jpg" id="25_Leave Behind" data-flag="@X" onclick="openSidebar('25_Leave Behind',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\26_Lethal Throwdown.jpg" id="26_Lethal Throwdown" data-flag="@X" onclick="openSidebar('26_Lethal Throwdown',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\28_Networked Sprintmods.jpg" id="28_Networked Sprintmods" data-flag="@X" onclick="openSidebar('28_Networked Sprintmods',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\21_Foul-Tongue Shriek.jpg" id="21_Foul-Tongue Shriek" data-flag="@X" onclick="openSidebar('21_Foul-Tongue Shriek',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\30_Toll of the Invasion.jpg" id="30_Toll of the Invasion" data-flag="@X" onclick="openSidebar('30_Toll of the Invasion',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\34_Yaraxian Infiltrator.jpg" id="34_Yaraxian Infiltrator" data-flag="@X" onclick="openSidebar('34_Yaraxian Infiltrator',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\80_The Lifeless Scourge.jpg" id="80_The Lifeless Scourge" data-flag="@X" onclick="openSidebar('80_The Lifeless Scourge',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\62_Brain Harvest.jpg" id="62_Brain Harvest" data-flag="@X" onclick="openSidebar('62_Brain Harvest',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\87_Steven, Patient Zero.jpg" id="87_Steven, Patient Zero" data-flag="@X" onclick="openSidebar('87_Steven, Patient Zero',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\77_Interplanar Invader, Yarax.jpg" id="77_Interplanar Invader, Yarax" data-flag="@X" onclick="openSidebar('77_Interplanar Invader, Yarax',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\63_Corrupt the Host.jpg" id="63_Corrupt the Host" data-flag="@X" onclick="openSidebar('63_Corrupt the Host',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\59_Appetite for Destruction.jpg" id="59_Appetite for Destruction" data-flag="@X" onclick="openSidebar('59_Appetite for Destruction',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\69_Expendable Force.jpg" id="69_Expendable Force" data-flag="@X" onclick="openSidebar('69_Expendable Force',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\66_Dreadbore.jpg" id="66_Dreadbore" data-flag="@X" onclick="openSidebar('66_Dreadbore',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\75_Hunger for Body and Soul.jpg" id="75_Hunger for Body and Soul" data-flag="@X" onclick="openSidebar('75_Hunger for Body and Soul',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\73_Haughty Tormentor.jpg" id="73_Haughty Tormentor" data-flag="@X" onclick="openSidebar('73_Haughty Tormentor',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\90_Tormented Flight.jpg" id="90_Tormented Flight" data-flag="@X" onclick="openSidebar('90_Tormented Flight',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\88_Target the Power Centers.jpg" id="88_Target the Power Centers" data-flag="@X" onclick="openSidebar('88_Target the Power Centers',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\94_War Machines.jpg" id="94_War Machines" data-flag="@X" onclick="openSidebar('94_War Machines',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\95_Widespread Brutality.jpg" id="95_Widespread Brutality" data-flag="@X" onclick="openSidebar('95_Widespread Brutality',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\74_Hullbreach Horror.jpg" id="74_Hullbreach Horror" data-flag="@X" onclick="openSidebar('74_Hullbreach Horror',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\83_Monument Melter.jpg" id="83_Monument Melter" data-flag="@X" onclick="openSidebar('83_Monument Melter',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\91_Unlicensed Disintegration.jpg" id="91_Unlicensed Disintegration" data-flag="@X" onclick="openSidebar('91_Unlicensed Disintegration',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\76_Imperial Weapons Techs.jpg" id="76_Imperial Weapons Techs" data-flag="@X" onclick="openSidebar('76_Imperial Weapons Techs',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\86_Skullscrapper.jpg" id="86_Skullscrapper" data-flag="@X" onclick="openSidebar('86_Skullscrapper',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\65_Dr. Splukrax.jpg" id="65_Dr. Splukrax" data-flag="@X" onclick="openSidebar('65_Dr. Splukrax',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\61_Assimilate Worlds.jpg" id="61_Assimilate Worlds" data-flag="@X" onclick="openSidebar('61_Assimilate Worlds',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\93_Vivisection Scholar.jpg" id="93_Vivisection Scholar" data-flag="@X" onclick="openSidebar('93_Vivisection Scholar',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\72_Greerax, Wireroot Network.jpg" id="72_Greerax, Wireroot Network" data-flag="@X" onclick="openSidebar('72_Greerax, Wireroot Network',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\78_Interplanar Politics.jpg" id="78_Interplanar Politics" data-flag="@X" onclick="openSidebar('78_Interplanar Politics',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\84_Oilblood Armaments.jpg" id="84_Oilblood Armaments" data-flag="@X" onclick="openSidebar('84_Oilblood Armaments',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\82_Mandatory Overtime.jpg" id="82_Mandatory Overtime" data-flag="@X" onclick="openSidebar('82_Mandatory Overtime',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\89_The Tireless Machine.jpg" id="89_The Tireless Machine" data-flag="@X" onclick="openSidebar('89_The Tireless Machine',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\85_The Ruthless Admiral.jpg" id="85_The Ruthless Admiral" data-flag="@X" onclick="openSidebar('85_The Ruthless Admiral',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\64_Dekriprax, Winged Plague.jpg" id="64_Dekriprax, Winged Plague" data-flag="@X" onclick="openSidebar('64_Dekriprax, Winged Plague',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\71_Grand Assimilation.jpg" id="71_Grand Assimilation" data-flag="@X" onclick="openSidebar('71_Grand Assimilation',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\92_Viral Colossus.jpg" id="92_Viral Colossus" data-flag="@X" onclick="openSidebar('92_Viral Colossus',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\79_Irax, the Surgeon.jpg" id="79_Irax, the Surgeon" data-flag="@X" onclick="openSidebar('79_Irax, the Surgeon',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\68_Escaped Test Subject.jpg" id="68_Escaped Test Subject" data-flag="@X" onclick="openSidebar('68_Escaped Test Subject',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\96_Yaraxian Conscription.jpg" id="96_Yaraxian Conscription" data-flag="@X" onclick="openSidebar('96_Yaraxian Conscription',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\60_Arrival of the Fleet.jpg" id="60_Arrival of the Fleet" data-flag="@X" onclick="openSidebar('60_Arrival of the Fleet',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\70_Firax, Radioactive Core.jpg" id="70_Firax, Radioactive Core" data-flag="@X" onclick="openSidebar('70_Firax, Radioactive Core',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\81_Manaweave Technology.jpg" id="81_Manaweave Technology" data-flag="@X" onclick="openSidebar('81_Manaweave Technology',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\67_Drop Ship.jpg" id="67_Drop Ship" data-flag="@X" onclick="openSidebar('67_Drop Ship',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\hss-files\img\103_The Spearhead, Yaraxian Flagship.jpg" id="103_The Spearhead, Yaraxian Flagship" data-flag="@X" onclick="openSidebar('103_The Spearhead, Yaraxian Flagship',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\98_Contagion Engine.jpg" id="98_Contagion Engine" data-flag="@X" onclick="openSidebar('98_Contagion Engine',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\1_Interplanar Drifter.jpg" id="1_Interplanar Drifter" data-flag="@X" onclick="openSidebar('1_Interplanar Drifter',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\97_Commander's Sphere.jpg" id="97_Commanders Sphere" data-flag="@X" onclick="openSidebar('97_Commanders Sphere',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\99_Orb of Decay.jpg" id="99_Orb of Decay" data-flag="@X" onclick="openSidebar('99_Orb of Decay',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\100_Orb of Tenacity.jpg" id="100_Orb of Tenacity" data-flag="@X" onclick="openSidebar('100_Orb of Tenacity',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\101_Orb of Tumult.jpg" id="101_Orb of Tumult" data-flag="@X" onclick="openSidebar('101_Orb of Tumult',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\102_Sol Ring.jpg" id="102_Sol Ring" data-flag="@X" onclick="openSidebar('102_Sol Ring',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\104_Command Tower.jpg" id="104_Command Tower" data-flag="@X" onclick="openSidebar('104_Command Tower',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\109_Swamp.jpg" id="109_Swamp" data-flag="@X" onclick="openSidebar('109_Swamp',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\108_Plains.jpg" id="108_Plains" data-flag="@X" onclick="openSidebar('108_Plains',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\106_Island.jpg" id="106_Island" data-flag="@X" onclick="openSidebar('106_Island',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\105_Forest.jpg" id="105_Forest" data-flag="@X" onclick="openSidebar('105_Forest',false)"></div>
+				<div class="container"><img alt="/sets\hss-files\img\107_Mountain.jpg" id="107_Mountain" data-flag="@X" onclick="openSidebar('107_Mountain',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+	</div>
+	</div>
+	<div class="sidebar" id="sidebar">
+		<div class="sidebar-container">
+			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
+			<img id="sidebar_h_img" class="sidebar-h-img">
+			<button class="flip-btn" id="sidebar-flip-btn" onclick="imgFlip('sidebar_img')"></button>
+		</div>
+		<button class="close-btn" onclick="closeSidebar()"></button>
+	</div>
+	<div class="footer"></div>
+
+	<script>
+	const delay = ms => new Promise(res => setTimeout(res, ms));
+		let specialchars = "";
+
+	document.addEventListener('DOMContentLoaded', async function() {
+		await fetch('/lists/all-cards.json')
+					.then(response => response.json())
+					.then(json => {
+						card_list = json;
+				}).catch(error => console.error('Error:', error));
+
+				await fetch('/resources/replacechars.txt')
+					.then(response => response.text())
+					.then(text => {
+						specialchars = text; 
+				}).catch(error => console.error('Error:', error));
+
+				card_list_arrayified = card_list.cards;
+
+		preloadImgs = document.getElementsByClassName('preload-hidden');
+
+		let images_loaded = [];
+
+		do {
+			await delay(100);
+			images_loaded = []
+			for (const img of preloadImgs)
+			{
+				images_loaded.push(isImageOk(img));
+			}
+		}
+		while (images_loaded.includes(false));
+
+		
+		loadImages();
+	});
+
+	function isImageOk(img) {
+		if (!img.complete || img.naturalWidth == 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function loadImages() {
+		const images = document.querySelectorAll('.grid-container img');
+
+		images.forEach(img => {
+			const flag = img.getAttribute('data-flag');
+
+			if (flag === '@N') {
+				img.src = '/img/card_back.png';
+				img.removeAttribute("onclick");
+				img.style.cursor = 'default';
+			}
+			else
+			{
+				img.src = img.alt;
+
+				if (flag === '@E') {
+					img.removeAttribute("onclick");
+					img.style.cursor = 'default';
+				}
+			}
+
+			img.style.visibility = 'visible';
+		});
+	}
+
+	window.addEventListener('resize', function(event) {
+		setSidebarTop();
+	}, true);
+
+	function setSidebarTop() {
+		let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+		let sh = document.getElementById('sidebar').offsetHeight;
+		let height = 100 * ((vh - sh) / 2) / vh;
+		document.getElementById('sidebar').style.top = height + '%';
+	}
+
+	let horizontal = false;
+
+	function imgFlip(num) {
+		tmp = document.getElementById(num).src;
+		console.log(num);
+		document.getElementById(num).src = document.getElementById(num).dataset.alt_src;
+		document.getElementById(num).dataset.alt_src = tmp;
+
+		if (num == 'sidebar_img')
+		{
+			const rotated_img = document.getElementById('sidebar_h_img');
+			const sidebar_img = document.getElementById('sidebar_img');
+
+			if (horizontal && rotated_img.style.display == 'none')
+			{
+				rotated_img.style.display = "block";
+				sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+			}
+			else
+			{
+				rotated_img.style.display = "none";
+				sidebar_img.style.filter = "";
+			}
+		}
+	}
+
+	function openSidebar(id, h = false) {
+		horizontal = h;
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'grid';
+
+		const rotated_img = document.getElementById('sidebar_h_img');
+		const sidebar_img = document.getElementById('sidebar_img');
+
+		sidebar_img.src = document.getElementById(id).src;
+		rotated_img.src = document.getElementById(id).src.replace("_back", "_front");
+
+		if (horizontal && !sidebar_img.src.includes("_back"))
+		{
+			rotated_img.style.display = "block";
+			sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+		}
+		else
+		{
+			rotated_img.style.display = "none";
+			sidebar_img.style.filter = "";
+		}
+
+		if (document.getElementById(id).dataset.alt_src)
+		{
+			document.getElementById('sidebar_img').dataset.alt_src = document.getElementById(id).dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'block';
+		}
+		else
+		{
+			delete document.getElementById('sidebar_img').dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'none';
+		}
+		document.getElementById('main-content').style.width = '60%';
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+		setSidebarTop();
+	}
+
+	function closeSidebar() {
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'none';
+		document.getElementById('main-content').style.width = '100%';
+
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	document.getElementById("search").addEventListener("keypress", function(event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			search();
+		}
+	});
+
+	function search() {
+		const url = new URL('search', window.location.origin);
+		url.searchParams.append('search', document.getElementById("search").value);
+		window.location.href = url;
+	}
+
+		function randomCard() {
+				let i = Math.floor(Math.random() * (card_list_arrayified.length + 1));
+				let random_card = card_list_arrayified[i];
+
+				const url = new URL('card', window.location.origin);
+				const params = {
+					set: random_card.set,
+					num: random_card.number,
+					name: random_card.card_name
+				}
+				for (const key in params) {
+					url.searchParams.append(key, params[key]);
+				}
+
+				window.location.href = url;
+			}
+	</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ﻿{
     "name": "Hot Santa Summer",
     "formats": "",
-    "trimmed": "y",
+    "trimmed": "n",
     "image_type": "jpg",
     "draft_structure": "play booster",
     "unpreviewed": "card back",
@@ -1968,6 +1968,5 @@
             "artist": "Dmitrii Ustinov",
             "notes": ""
         }
-    ],
-    "version": 1
+    ]
 }
